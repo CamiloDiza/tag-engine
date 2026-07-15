@@ -48,14 +48,14 @@
                     {{-- Search input --}}
                     <div class="relative w-64">
                         <span class="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-text-primary">
-                            <svg class="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            <svg class="w-4.5 h-4.5" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2">
                                 <circle cx="11" cy="11" r="7"></circle>
                                 <path d="M21 21l-4.35-4.35"></path>
                             </svg>
                         </span>
                         <input type="search" placeholder="Search tags..."
-                            class="w-full h-[38px] pl-10 pr-4 py-2 bg-surface-input border border-border-muted font-body text-sm text-text-heading placeholder:text-border-muted focus:outline-none focus:border-text-primary">
+                            class="w-full h-9.5 pl-10 pr-4 py-2 bg-surface-input border border-border-muted font-body text-sm text-text-heading placeholder:text-border-muted focus:outline-none focus:border-text-primary">
                     </div>
                 </div>
 
@@ -124,9 +124,9 @@
                         <tr class="font-label font-bold text-xs uppercase tracking-[1.2px] text-text-primary">
                             <th class="px-6 py-5 font-bold align-middle">
                                 <label
-                                    class="relative inline-flex items-center justify-center w-[18px] h-[18px] cursor-pointer">
+                                    class="relative inline-flex items-center justify-center w-4.5 h-4.5 cursor-pointer">
                                     <input type="checkbox" data-check-all
-                                        class="peer appearance-none w-[18px] h-[18px] m-0 cursor-pointer bg-background border border-border-muted checked:bg-magenta checked:border-magenta">
+                                        class="peer appearance-none w-4.5 h-4.5 m-0 cursor-pointer bg-background border border-border-muted checked:bg-magenta checked:border-magenta">
                                     <svg class="pointer-events-none absolute w-3 h-3 text-white opacity-0 peer-checked:opacity-100"
                                         viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
                                         <path d="M5 13l4 4L19 7" />
@@ -156,7 +156,7 @@
                 class="flex flex-row justify-between items-center gap-6 p-6 bg-surface-raised border-t-2 border-border">
                 <div data-pagination class="flex flex-row items-center gap-1">
                     <button type="button" data-page-prev
-                        class="px-3 py-2 h-[35px] bg-background border-2 border-border-strong font-label text-[10px] uppercase text-text-heading disabled:opacity-50 disabled:cursor-not-allowed">Previous</button>
+                        class="px-3 py-2 h-8.75 bg-background border-2 border-border-strong font-label text-[10px] uppercase text-text-heading disabled:opacity-50 disabled:cursor-not-allowed">Previous</button>
 
                     <div class="flex flex-row items-center gap-1">
                         <button type="button" data-page="1"
@@ -171,7 +171,7 @@
                     </div>
 
                     <button type="button" data-page-next
-                        class="px-3 py-2 h-[35px] bg-background border-2 border-border-strong font-label text-[10px] uppercase text-text-heading disabled:opacity-50 disabled:cursor-not-allowed">Next</button>
+                        class="px-3 py-2 h-8.75 bg-background border-2 border-border-strong font-label text-[10px] uppercase text-text-heading disabled:opacity-50 disabled:cursor-not-allowed">Next</button>
                 </div>
 
                 <span data-showing class="font-label font-bold text-[10px] uppercase text-text-muted">Showing 1-10 of
@@ -200,7 +200,7 @@
                             class="font-label font-bold text-xs uppercase tracking-[1.2px] text-text-primary">Gender</label>
                         <div class="relative">
                             <select
-                                class="w-full h-[52px] px-3 bg-surface-input border-2 border-border-strong font-body text-base text-text-heading appearance-none focus:outline-none">
+                                class="w-full h-13 px-3 bg-surface-input border-2 border-border-strong font-body text-base text-text-heading appearance-none focus:outline-none">
                                 <option>Female</option>
                                 <option>Male</option>
                                 <option>Trans</option>
@@ -218,7 +218,7 @@
                         <label
                             class="font-label font-bold text-xs uppercase tracking-[1.2px] text-text-primary">Age</label>
                         <input type="number" value="21"
-                            class="w-full h-[50px] px-3 bg-surface-input border border-border-muted font-body text-base text-text-heading focus:outline-none focus:border-text-primary">
+                            class="w-full h-12.5 px-3 bg-surface-input border border-border-muted font-body text-base text-text-heading focus:outline-none focus:border-text-primary">
                     </div>
 
                     {{-- COUNTRY --}}
@@ -226,7 +226,7 @@
                         <label
                             class="font-label font-bold text-xs uppercase tracking-[1.2px] text-text-primary">Country</label>
                         <input type="text" value="Brazil"
-                            class="w-full h-[50px] px-3 bg-surface-input border border-border-muted font-body text-base text-text-heading focus:outline-none focus:border-text-primary">
+                            class="w-full h-12.5 px-3 bg-surface-input border border-border-muted font-body text-base text-text-heading focus:outline-none focus:border-text-primary">
                     </div>
 
                     {{-- LANGUAGES --}}
@@ -234,7 +234,7 @@
                         <label
                             class="font-label font-bold text-xs uppercase tracking-[1.2px] text-text-primary">Languages</label>
                         <input type="text" value="Portuguese, English"
-                            class="w-full h-[50px] px-3 bg-surface-input border border-border-muted font-body text-base text-text-heading focus:outline-none focus:border-text-primary">
+                            class="w-full h-12.5 px-3 bg-surface-input border border-border-muted font-body text-base text-text-heading focus:outline-none focus:border-text-primary">
                     </div>
 
                     {{-- HAIR COLOR --}}
@@ -243,7 +243,7 @@
                             Color</label>
                         <div class="relative">
                             <select
-                                class="w-full h-[52px] px-3 bg-surface-input border-2 border-border-strong font-body text-base text-text-heading appearance-none focus:outline-none">
+                                class="w-full h-13 px-3 bg-surface-input border-2 border-border-strong font-body text-base text-text-heading appearance-none focus:outline-none">
                                 <option>Brunette</option>
                                 <option>Blonde</option>
                                 <option>Black</option>
@@ -262,7 +262,7 @@
                             Type</label>
                         <div class="relative">
                             <select
-                                class="w-full h-[52px] px-3 bg-surface-input border-2 border-border-strong font-body text-base text-text-heading appearance-none focus:outline-none">
+                                class="w-full h-13 px-3 bg-surface-input border-2 border-border-strong font-body text-base text-text-heading appearance-none focus:outline-none">
                                 <option>Slim</option>
                                 <option>Athletic</option>
                                 <option>Average</option>
@@ -280,7 +280,7 @@
                         <label class="font-label font-bold text-xs uppercase tracking-[1.2px] text-text-primary">Skin
                             Tone</label>
                         <input type="text" value="Tan"
-                            class="w-full h-[50px] px-3 bg-surface-input border border-border-muted font-body text-base text-text-heading focus:outline-none focus:border-text-primary">
+                            class="w-full h-12.5 px-3 bg-surface-input border border-border-muted font-body text-base text-text-heading focus:outline-none focus:border-text-primary">
                     </div>
 
                     {{-- CURRENT ROOM SIZE --}}
@@ -289,7 +289,7 @@
                             class="font-label font-bold text-xs uppercase tracking-[1.2px] text-text-primary">Current
                             Room Size</label>
                         <input type="number" value="120"
-                            class="w-full h-[50px] px-3 bg-surface-input border border-border-muted font-body text-base text-text-heading focus:outline-none focus:border-text-primary">
+                            class="w-full h-12.5 px-3 bg-surface-input border border-border-muted font-body text-base text-text-heading focus:outline-none focus:border-text-primary">
                     </div>
                 </div>
 
@@ -319,7 +319,7 @@
 
                 {{-- Submit --}}
                 <button type="submit"
-                    class="w-full h-[62px] bg-accent hover:bg-accent-hover transition-colors font-label font-medium text-xs uppercase tracking-[1.2px] text-background">
+                    class="w-full h-15.5 bg-accent hover:bg-accent-hover transition-colors font-label font-medium text-xs uppercase tracking-[1.2px] text-background">
                     Update Recommendations
                 </button>
             </form>
