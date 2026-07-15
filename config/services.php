@@ -35,4 +35,14 @@ return [
         ],
     ],
 
+    'chaturbate' => [
+        'base_url' => env('CHUBATURATE_BASE_URL', 'https://chaturbate.com'),
+        'endpoint' => env('CHUBATURATE_ENDPOINT', 'api/ts/hashtags/tag-table-data/'),
+        'limit' => env('CHUBATURATE_LIMIT', 100),
+        'timeout' => env('CHUBATURATE_TIMEOUT', 15),
+        'connect_timeout' => env('CHUBATURATE_CONNECT_TIMEOUT', 5),
+        'retry_attempts' => env('CHUBATURATE_RETRY_ATTEMPTS', 3),
+        'retry_sleep_milliseconds' => env('CHUBATURATE_RETRY_SLEEP_MILLISECONDS', 500),
+    ],
+
 ];
