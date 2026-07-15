@@ -1,8 +1,45 @@
+@import "@fontsource/hanken-grotesk";
+@import "@fontsource/inter";
+@import "@fontsource/jetbrains-mono";
+
 @import 'tailwindcss';
 
 @source '../views';
+@source '../js';
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 
 @theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    /* Surfaces (darkest → lightest) */
+    --color-background: #131313;      /* page background */
+    --color-surface: #1C1B1B;         /* cards / panels */
+    --color-surface-raised: #2A2A2A;  /* control & footer bars */
+    --color-surface-muted: #353534;   /* table head, neutral badges */
+    --color-surface-input: #201F1F;   /* form fields */
+
+    /* Borders */
+    --color-border: #603E39;          /* subtle section dividers */
+    --color-border-strong: #B18780;   /* card outlines, buttons */
+    --color-border-muted: #6B7280;    /* input borders */
+
+    /* Text */
+    --color-text-primary: #FFB4A8;    /* primary accent text */
+    --color-text-heading: #E5E2E1;    /* headings / high-emphasis */
+    --color-text-muted: #EBBBB4;      /* secondary / body copy */
+
+    /* Accent — coral (primary CTA) */
+    --color-accent: #FB5442;
+    --color-accent-hover: #E84734;
+
+    /* Accent — magenta (tag selection) */
+    --color-magenta: #DE0074;
+    --color-on-magenta: #FFF6F7;      /* text/border on magenta */
+
+    /* Misc accents */
+    --color-highlight: #FFB1C7;       /* recommendation labels */
+    --color-on-active: #690100;       /* text on active pagination */
+
+    /* Typography */
+    --font-headline: "Hanken Grotesk", sans-serif;
+    --font-body: "Inter", sans-serif;
+    --font-label: "JetBrains Mono", monospace;
 }
