@@ -61,51 +61,12 @@
 
                 {{-- Results meta --}}
                 <div class="flex flex-col items-end">
-                    <span class="font-label font-bold text-[10px] uppercase text-text-primary">245 Tags Available</span>
+                    <span
+                        class="font-label font-bold text-[10px] uppercase text-text-primary">{{ $snapshot->total_tags_captured }}
+                        Tags Available</span>
                     <span class="font-label text-[10px] uppercase text-text-muted">Sorted by Best Recommendation</span>
                 </div>
             </div>
-
-            @php
-                $tags = [
-                    [
-                        'name' => 'Teen',
-                        'stars' => 5,
-                        'label' => 'Very Recommended',
-                        'viewers' => '12.4k',
-                        'rooms' => 84,
-                        'rec' => 'Good Opportunity',
-                        'recClass' => 'text-highlight',
-                        'exp' => 'High traffic for your age group in selected country.',
-                        'badge' => 'magenta',
-                        'selected' => true,
-                    ],
-                    [
-                        'name' => 'Latina',
-                        'stars' => 4,
-                        'label' => 'Recommended',
-                        'viewers' => '8.9k',
-                        'rooms' => 112,
-                        'rec' => 'Stable Traffic',
-                        'recClass' => 'text-text-heading',
-                        'exp' => 'Essential tag for regional visibility. High competition.',
-                        'badge' => 'muted',
-                        'selected' => true,
-                    ],
-                    [
-                        'name' => 'Tattoo',
-                        'stars' => 3,
-                        'label' => 'Niche Target',
-                        'viewers' => '3.2k',
-                        'rooms' => 45,
-                        'rec' => 'Low Saturation',
-                        'recClass' => 'text-text-heading',
-                        'exp' => 'Underserved category for the current time-slot.',
-                        'badge' => 'muted',
-                        'selected' => false,
-                    ],
-                ];
-            @endphp
 
             {{-- Table --}}
             <div class="w-full overflow-x-auto">
@@ -144,39 +105,30 @@
                     </thead>
 
                     <tbody class="font-body text-sm">
-                        @foreach ($tags as $tag)
-                            <x-tag-engine.recommendation-row :tag="$tag" />
+                        @foreach ($items as $item)
+                            <tr class="border-t-2 border-surface-muted">
+                                <td></td>
+                                <td class="px-6 py-6 align-middle">
+                                    <x-tag-engine.tag-badge>
+                                        {{ $item['hashtag'] }}
+                                    </x-tag-engine.tag-badge>
+                                </td>
+                                <td></td>
+                                <td class="px-6 py-6 align-middle font-bold text-text-heading">
+                                    {{ $item['viewer_count'] }}</td>
+                                <td class="px-6 py-6 align-middle text-text-muted">{{ $item['room_count'] }}</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
                         @endforeach
                     </tbody>
                 </table>
             </div>
 
             {{-- Pagination footer --}}
-            <div
-                class="flex flex-row justify-between items-center gap-6 p-6 bg-surface-raised border-t-2 border-border">
-                <div data-pagination class="flex flex-row items-center gap-1">
-                    <button type="button" data-page-prev
-                        class="px-3 py-2 h-8.75 bg-background border-2 border-border-strong font-label text-[10px] uppercase text-text-heading disabled:opacity-50 disabled:cursor-not-allowed">Previous</button>
 
-                    <div class="flex flex-row items-center gap-1">
-                        <button type="button" data-page="1"
-                            class="w-8 h-8 border-2 border-border-strong font-label text-[10px]">1</button>
-                        <button type="button" data-page="2"
-                            class="w-8 h-8 border-2 border-border-strong font-label text-[10px]">2</button>
-                        <button type="button" data-page="3"
-                            class="w-8 h-8 border-2 border-border-strong font-label text-[10px]">3</button>
-                        <span class="px-1 font-body text-base text-text-muted">…</span>
-                        <button type="button" data-page="10"
-                            class="w-8 h-8 border-2 border-border-strong font-label text-[10px]">10</button>
-                    </div>
-
-                    <button type="button" data-page-next
-                        class="px-3 py-2 h-8.75 bg-background border-2 border-border-strong font-label text-[10px] uppercase text-text-heading disabled:opacity-50 disabled:cursor-not-allowed">Next</button>
-                </div>
-
-                <span data-showing class="font-label font-bold text-[10px] uppercase text-text-muted">Showing 1-10 of
-                    245 Tags</span>
-            </div>
+            {{ $items->links('custom-pagination-links') }}
         </section>
 
         {{-- Section 02 - Refine Recommendations (collapsible) --}}
