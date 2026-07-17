@@ -14,7 +14,7 @@
                         <path d="M21 21l-4.35-4.35"></path>
                     </svg>
                 </span>
-                <input type="search" placeholder="Search tags..."
+                <input type="search" wire:model.live="search" placeholder="Search tags..."
                     class="w-full h-9.5 pl-10 pr-4 py-2 bg-surface-input border border-border-muted font-body text-sm text-text-heading placeholder:text-border-muted focus:outline-none focus:border-text-primary">
             </div>
         </div>
